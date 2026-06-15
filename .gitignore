@@ -103,7 +103,8 @@ TEST_MOTIONS_MY.md
 
 tmp/
 
-motion_data/
+# Nested git clone of LAFAN1 official repo (keep local, do not track)
+motion_data/lafan1/ubisoft-laforge-animation-dataset/
 
 GVHMR/
 
