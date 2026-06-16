@@ -47,6 +47,27 @@ python3 scripts/bvh_to_robot.py \
   --save_path outputs/fallAndGetUp1_subject1.pkl \
   --rate_limit
 
+python3 scripts/bvh_to_robot.py \
+  --bvh_file motion_data/lafan1/bvh/push1_subject2.bvh \
+  --format lafan1 \
+  --robot d2_smplify \
+  --save_path outputs/push1_subject2.pkl \
+  --rate_limit
+
+python3 scripts/bvh_to_robot.py \
+  --bvh_file motion_data/lafan1/bvh/pushAndFall1_subject1.bvh \
+  --format lafan1 \
+  --robot d2_smplify \
+  --save_path outputs/pushAndFall1_subject1.pkl \
+  --rate_limit
+
+python3 scripts/bvh_to_robot.py \
+  --bvh_file motion_data/lafan1/bvh/pushAndStumble1_subject2.bvh \
+  --format lafan1 \
+  --robot d2_smplify \
+  --save_path outputs/pushAndStumble1_subject2.pkl \
+  --rate_limit
+
 # 一个文件夹里的所有 .bvh
 python3 scripts/bvh_to_robot_dataset.py \
   --src_folder motion_data/lafan1/bvh \
@@ -57,6 +78,14 @@ python3 scripts/bvh_to_robot_dataset.py \
 python3 scripts/vis_robot_motion.py \
   --robot d2_smplify \
   --robot_motion_path outputs/d2_motion.pkl
+
+# 多个pkl转CSV
+python3 scripts/batch_gmr_pkl_to_csv.py \
+  --folder outputs
+
+扫描 outputs/ 下面所有 .pkl，然后生成：
+outputs/csv/walk1_subject1.csv
+
 
 # 先把改动临时存起来，再拉取
 
